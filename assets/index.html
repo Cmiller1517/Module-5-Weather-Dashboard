@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header class="Main-Header">Weather Dashboard</header>
+</body>
+
+    <main id="container" , class="container">
+        <div class="search-box">
+            <!--  This is the area to place the search city -->
+            <div class="cont1"></div>
+            <div id='search-area'>
+                <h1 class='h1'>Search for a City:</h1>
+                <form id='city-search'>
+                    <input name='city' type="text" placeholder="Delray Beach" id='city' autofocus='true'
+                        class='city-input' />
+                    <button type="submit" id='search-btn' class='btn'>Search</button>
+                </form>
+            </div>
+            <div id="search-history-container" class="row m-0 search-history-container">
+        </div>
+        </div>
+    </main>
+    <main>
+        <div class="Weather-forecast">
+            <h3 class="card-header">5 Day Weather Forecast</h3>
+            <p id="current-weather"></p>
+            <p id="current-city"></p>
+            <div class="row justify-content-center">
+                <img class="today-img" src="./assets/images/placeholder.png">
+                <div class="column">
+                <p class="today-temp"></p>
+                <p class="today-wind"></p>
+                <p class="today-hum"></p>
+                </div>
+            </div>
+    </main>
+
