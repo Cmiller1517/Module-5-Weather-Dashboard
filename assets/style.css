@@ -52,15 +52,28 @@ header {
     margin-left: -180px;
     border-radius: 5%;
     border: solid;
+    margin-top: 10px;
 }
 
-.cont1 {
-    width: 20%;
-    margin: 0 auto;
-    
+/* ---- past search foramtting */
+
+.search-history {
+    padding: 10px;
 }
-
-
+.past-search {
+    background-color: white;
+    border-width: thin;
+    border-color: lightgrey;
+    border-style: solid;
+    border-radius: 3px;
+    margin: 0;
+    text-align: left;
+    width: 350px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    color: grey;
+}
 
 /* Main Hero Section Stylings */
 
@@ -80,7 +93,9 @@ header {
     flex: auto;
     text-align: center;
     border: solid;
+    height: 400px;
     margin-left: 400px;
+    margin-top: 10px;
    
 }
 
@@ -88,10 +103,50 @@ header {
     text-align: center;
 }
 
-.current-weather{
+.flex-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 400px;
+    height: 200px;
+    margin-top: 10px;
 
+  }
+
+.card{
+    flex: 1 1 0;
+    padding: 10px;
+    height: 300px;
+    border-style:ridge;
+    border-width: 10;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(66, 66, 233);
 }
 
-.current-city{
-    
+.today-img {
+    width: 250px;
+    height: auto;
 }
+
+.card-img0, .card-img1, .card-img2, .card-img3, .card-img4{
+    width: auto;
+    height: 100px;
+}
+
+  /* Mobile Screen */
+  @media only screen and (max-width: 500px) {
+    .display-desktop {
+      display: none;
+    }
+  
+    .display-mobile {
+      display: block;
+    }
+  
+    .flex-column-mobile {
+      align-items: center;
+      flex-direction: column;
+    }
+  }

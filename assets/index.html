@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./style.css">
 
     <title>Weather Dashboard</title>
 </head>
@@ -14,34 +14,94 @@
     <header class="Main-Header">Weather Dashboard</header>
 </body>
 
-    <main id="container" , class="container">
-        <div class="search-box">
-            <!--  This is the area to place the search city -->
-            <div class="cont1"></div>
-            <div id='search-area'>
-                <h1 class='h1'>Search for a City:</h1>
-                <form id='city-search'>
-                    <input name='city' type="text" placeholder="Delray Beach" id='city' autofocus='true'
-                        class='city-input' />
-                    <button type="submit" id='search-btn' class='btn'>Search</button>
-                </form>
-            </div>
-            <div id="search-history-container" class="row m-0 search-history-container">
+<main id="container" , class="container">
+    <div class="search-box">
+        <!--  This is the area to place the search city -->
+        <div id='search-area'>
+            <h1 class='h1'>Search for a City:</h1>
+            <form id='city-search'>
+                <input name='city' type="text" placeholder="Delray Beach" id='city' autofocus='true'
+                    class='city-input' />
+                <button type="submit" id='search-btn' class='btn'>Search</button>
+            </form>
         </div>
+        <div id="search-history">
         </div>
-    </main>
-    <main>
-        <div class="Weather-forecast">
-            <h3 class="card-header">5 Day Weather Forecast</h3>
-            <p id="current-weather"></p>
-            <p id="current-city"></p>
-            <div class="row justify-content-center">
-                <img class="today-img" src="./assets/images/placeholder.png">
-                <div class="column">
-                <p class="today-temp"></p>
-                <p class="today-wind"></p>
-                <p class="today-hum"></p>
-                </div>
-            </div>
-    </main>
+    </div>
+</main>
+<main>
+    <div class="Weather-forecast">
+        <h3 class="card-header">Todays Forecast</h3>
+        <p id="current-weather"></p>
+        <p id="current-city"></p>
+        <img class="today-img" src="./Images/SunImage.jpg">
+        <div class="column">
+            <p class="today-temp"></p>
+            <p class="today-wind"></p>
+            <p class="today-hum"></p>
+        </div>
+    </div>
 
+<div class="flex-grid">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-day0"></h5>
+            <img class="card-img0" src="./Images/SunImage.jpg">
+            <p class="card-temp0"></p>
+            <p class="card-wind0"></p>
+            <p class="card-hum0"></p>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-day1"></h5>
+            <img class="card-img1" src="./Images/SunImage.jpg">
+            <p class="card-temp1"></p>
+            <p class="card-wind1"></p>
+            <p class="card-hum1"></p>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-day2"></h5>
+            <img class="card-img2" src="./Images/SunImage.jpg">
+            <p class="card-temp2"></p>
+            <p class="card-wind2"></p>
+            <p class="card-hum2"></p>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-day3"></h5>
+            <img class="card-img3" src="./Images/SunImage.jpg">
+            <p class="card-temp3"></p>
+            <p class="card-wind3"></p>
+            <p class="card-hum3"></p>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-day4"></h5>
+            <img class="card-img4" src="./Images/SunImage.jpg">
+            <p class="card-temp4"></p>
+            <p class="card-wind4"></p>
+            <p class="card-hum4"></p>
+
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+
+</main>
+
+<script src="./script.js"></script>
