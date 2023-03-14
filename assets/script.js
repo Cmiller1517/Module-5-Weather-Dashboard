@@ -119,15 +119,6 @@ $("#search-btn").click(function (event) {
           nameOfCity: cityName
         }
 
-        searchHistory.push(citySearch);
-        localStorage.setItem("search", JSON.stringify(searchHistory));
-
-
-        if (!clicked == true) {
-          renderSearchHistory();
-        }
-
-        currentCity.textContent = citySearch.nameOfCity;
 
         for (i = 1; i < 6; i++) {
           var dayOfWeek = dayjs().add(i, 'day').format('MM/DD/YYYY');
