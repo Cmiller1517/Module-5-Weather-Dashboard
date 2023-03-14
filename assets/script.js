@@ -1,7 +1,7 @@
 var savedSearches = [];
 // ------------------------SEARCH BAR FUNCTIONS------------------//
 // called when the search form is submitted
-$("#city-search").on("submit", function () {
+$("#city-search").on("submit", function (event) {
   event.preventDefault();
 
   // get name of city searched
@@ -100,7 +100,6 @@ var currentCity = document.querySelector("#current-city");
 $("#search-btn").click(function (event) {
   event.preventDefault();
   var cityName = $(this).siblings(".city-input").val();
-  document.querySelector("#old-search").value = "";
   getApi();
 
   function getApi() {
@@ -175,13 +174,17 @@ $("#search-btn").click(function (event) {
         return response.json();
       })
       .then(function (todayData) {
+        console.log(todayData)
         var todayWeather = document.querySelector("#current-weather");
         var icon = document.querySelector(".today-img");
         var todayTemp = document.querySelector(".today-temp");
         var todayWind = document.querySelector(".today-wind");
         var todayHum = document.querySelector(".today-hum");
+        var today = new Date ().toLocaleDateString ()
+        var citySearch = document.querySelector("#current-city");
 
-        todayWeather.textContent = today.format('MMM D, YYYY');
+        citySearch.innerHTML = `<strong>${todayData.name}</strong`
+        todayWeather.textContent = today
         todayTemp.textContent = "Temperature: " + (((todayData.main.temp) * 9 / 5) + 32).toFixed(2) + " °F";
         todayWind.textContent = "Wind Speed: " + todayData.wind.speed + " MPH";
         todayHum.textContent = "Humidity: " + todayData.main.humidity + " %";
