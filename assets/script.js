@@ -1,4 +1,4 @@
-var savedSearches = [];
+
 // ------------------------SEARCH BAR FUNCTIONS------------------//
 // called when the search form is submitted
 $("#city-search").on("submit", function (event) {
@@ -18,6 +18,8 @@ $("#city-search").on("submit", function (event) {
   }
 });
 
+// ---Stores Past searches---//
+var savedSearches = [];
 
 // make list of previously searched cities
 var searchHistory = function (cityName) {
@@ -30,7 +32,7 @@ var searchHistory = function (cityName) {
 
   // creates the styling container
   var searchEntryContainer = $("<div>");
-  searchEntryContainer.addClass("past-search-container");
+  searchEntryContainer.addClass("past-search");
 
   // append entry to container
   searchEntryContainer.append(searchHistoryEntry);
